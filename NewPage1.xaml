@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TUCanteen.NewPage1"
+             Title="NewPage1">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="20" Spacing="15">
+            <!-- Logo -->
+            <StackLayout HorizontalOptions="Center">
+                <Image Source="logo1.png" WidthRequest="300" HeightRequest="300" />
+                <Label Text="Canteen" FontSize="24" FontAttributes="Bold" TextColor="#D42D2D" HorizontalTextAlignment="Center" />
+                <Label Text="THAMMASAT" FontSize="14" FontAttributes="Bold" TextColor="#777" HorizontalTextAlignment="Center" />
+            </StackLayout>
+
+            <!-- Username Entry -->
+            <Entry x:Name="EntryName"
+                   Placeholder="Username"
+                   FontSize="16"
+                   BackgroundColor="White"
+                   TextColor="Black"
+                   HeightRequest="40"
+                   Margin="0,0,0,10"
+                   HorizontalTextAlignment="Start" />
+
+            <!-- Password Entry -->
+            <Entry x:Name="EntryPassword"
+                   Placeholder="Password"
+                   FontSize="16"
+                   BackgroundColor="White"
+                   TextColor="Black"
+                   IsPassword="True"
+                   HeightRequest="40"
+                   HorizontalTextAlignment="Start" />
+
+            <!-- Forgot Password -->
+            <Label Text="Forgot Password?"
+                   FontSize="14"
+                   TextColor="#D42D2D"
+                   HorizontalOptions="End"
+                   VerticalOptions="Center" />
+              
+
+            <!-- Login Button -->
+            <Button Text="Login"
+                    BackgroundColor="#D42D2D"
+                    TextColor="White"
+                    FontSize="16"
+                    CornerRadius="5"
+                    HeightRequest="40"
+                    Command="{Binding LoginCommand}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
